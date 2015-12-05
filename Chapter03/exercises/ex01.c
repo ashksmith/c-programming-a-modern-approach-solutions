@@ -1,5 +1,6 @@
 /*Author: Ashley K. Smith
  *Solution to "C Programming: A modern approach" chapter 3, exercise 1
+
  * What output do the following called of printf produce?
 	(a) printf("%6d,%4d", 86, 1040); 
 		"    86,1040" a minimum of 6 numbers and a minimum of 4 numbers
