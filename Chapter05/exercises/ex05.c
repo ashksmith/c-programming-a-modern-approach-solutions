@@ -1,5 +1,5 @@
 /* Author: Ashley K. Smith
- * Solution to "C Programming: A Modern Approach" chapter 4, programming project 1
+ * Solution to "C Programming: A Modern Approach" chapter 5, exercise 5.
 
 Q: Is the following if statement legal?
 
