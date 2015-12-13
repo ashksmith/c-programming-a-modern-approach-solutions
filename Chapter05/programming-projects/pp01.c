@@ -1,15 +1,24 @@
 /* Author: Ashley K. Smith
- * Solution to "C Programming: A Modern Approach" chapter 4, programming project 1
+ * Solution to "C Programming: A Modern Approach" chapter 5, programming project 1
+*/
 
-Q: Is the following if statement legal?
-
-if (n >= 1 <=10)
-	printf("n is between 1 and 10\n");
-
-No, the correct statement is :
-	if (n >= 1 && n <= 10){
-		 expr1, ...
+#include <stdio.h>
+int main(void){
+	int n;
+	printf("Enter a number: ");
+	scanf("%d", &n);
+	printf("The number %d has ", n);
+	if(n >= 0 && n <= 9){
+		printf("1 digit\n");
+	} else if(n >= 10 && n <= 99){
+		printf("2 digits\n");
+	}else if(n >= 100 && n <= 999){
+		printf("3 digits\n");
+	} else {
+		printf("more than 3 digits\n");
 	}
 
-*/
+	return 0;
+}
+
 
