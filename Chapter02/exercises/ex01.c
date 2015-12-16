@@ -1,5 +1,5 @@
 //Author: Ashley K. Smith
-//Solution to "C Programming: A modern approach" chapter 2, exericse 1. 
+//Solution to "C Programming: A modern approach" chapter 2, exericse 1
 
 #include <stdio.h>
 
