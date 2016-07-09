@@ -1,14 +1,18 @@
 /* Author: Ashley K. Smith
  * Solution to "C Programming: A Modern Approach" Chapter 6, Exercise 
- *
+ * 
  * Q: What output does the following program fragment produce? 
  *
- * i = 1;
- * while (i <= 128){
+ * i = 9384;
+ * do {
  * 	printf("%d ", i);
- * 	i *= 2;
- * }
+ * 	i /= 10;
+ * } while (i > 0);
  *
- * A: The program fragment will produce the first 8 places of the base 2 number system (Binary). 
- * "1 2 4 8 16 32 64 128"
+	* A: "9384 938 93 9" 
  */
+
+
+
+
+
