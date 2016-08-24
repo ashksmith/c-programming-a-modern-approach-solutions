@@ -1,0 +1,20 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 5
+
+Q: Which one of the following is not a legal way to write the number 65?
+   (Assume that the character set is ASCII).
+
+(a) 'A'
+    According to asciitable.com a captital 'A' is equal to 65 and is legal.      
+
+(b) 0b1000001
+    Illegal, cannot represent 65 using binary in C. 
+
+(c) 0101
+    Legal, 0101 is an base8 number which is 01000001 in base2, or 65 in base10     
+
+(d) 0x41
+    Legal, 0x41 is equal to 01000001 in base2, which is 65 in base10
+
+
+

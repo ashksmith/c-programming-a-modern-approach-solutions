@@ -1,0 +1,22 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 6
+
+Q: For each of the following items of data, specify which one of the types
+   char, short, int or long is the smallest one guaranteed to be large enough to store the item
+
+(a) Days in a month
+    char
+    31 base10, 11111 base2
+
+(b) Days in a year
+    short 
+    365 base10, 101101101 base2
+
+(c) Minutes in a day
+    short 
+    1,440 base10, 10110100000 base2
+
+(d) Seconds in a day
+    long
+    86,400 base10, 10101000110000000 base2
+

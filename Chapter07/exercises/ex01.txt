@@ -1,0 +1,17 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 1
+
+Q: Give the decimal value of each of the following integer constants.
+
+(a) 077
+(b) 0x77
+(c) 0XABC
+
+A:
+
+(a) 077 is equal to 00111111 in base2, which is 63 in base10.
+(b) 0x77 is equal to 01110111 in base2, which is 119 in base10.
+(c) 0XABC is equal to 101010111100 in base2, which is 2748 in base 10.
+
+
+

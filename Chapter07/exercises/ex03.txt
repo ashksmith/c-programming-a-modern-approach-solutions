@@ -1,0 +1,18 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 3
+
+Q: Which of the following are not legal tpes in C?
+
+(a) short unsigned int 
+    Legal
+
+(b) short float
+    Illegal
+
+(c) long double
+    legal
+
+(d) unsigned long
+    Legal
+
+

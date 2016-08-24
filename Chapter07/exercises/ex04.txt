@@ -1,0 +1,13 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 4
+
+Q: If c is a variable of type char , which one of the following statements is illegal
+
+   (a) i += c;
+   (b) c = 2 * c - 1;
+   (c) putchar(c);
+   (d) printf(c);
+
+A:
+   d is illegal. A legal usage would be printf("%c", c); to print the character stored in c
+

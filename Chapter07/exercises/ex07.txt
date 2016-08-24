@@ -1,0 +1,18 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 7
+
+Q: For each of the following character escapes, give the equivalent octal escape
+   (Assume that the character set is ASCII.) 
+
+(a) \b
+    The escape character for backspace is \010 or \10
+
+(b) \n
+    The escape character for new line is \012 or \12
+
+(c) \r
+    The escape character for a carriage return is \015 or \15
+
+(d) \t
+    The escape character for a horizontal tab is \011 or \11
+

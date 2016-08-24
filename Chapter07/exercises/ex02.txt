@@ -1,0 +1,23 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 2
+
+Q: Which of the following are not legal constants in C? Classify each legal constant
+   as either integer or floating point.
+
+(a) 010E2
+    Could be Octal, but due to the exponent the number must be a legal base10 floating point
+
+(b) 32.1E+5
+    Legal floating point
+
+(c) 0790
+    An octal value as it starts witha 0, but is illegal because 9 is outside base8 range
+
+(d) 100_000
+    Illegal
+
+(e) 3.98e-2
+    Legal floating point
+
+
+
