@@ -1,0 +1,7 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 9
+
+Q: Suppose that i and j are variables of type int. What  is the type of the expression
+   i / j + 'a'?
+
+A: Chars are treated as integers, the type of the expression is int.

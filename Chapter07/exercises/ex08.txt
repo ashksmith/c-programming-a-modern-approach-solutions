@@ -1,0 +1,17 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 8
+
+Q: Repeat exercise 7, but give the equivalent hexadecimal escape
+
+(a) \b
+    \x08    
+
+(b) \n
+    \x0a
+
+(c) \r
+    \x0d
+
+(d) \t
+    \x09
+

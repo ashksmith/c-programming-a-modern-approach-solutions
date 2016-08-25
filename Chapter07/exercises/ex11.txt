@@ -1,0 +1,9 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 11
+
+Q: Suppose that i is a variable of type int. f is variable of type float, and d 
+   is a variable of type double. What is the type of the expression i * f / d?
+
+The largest type in this example is double, the float and int will be promoted
+to doubles to resolve the expression.
+

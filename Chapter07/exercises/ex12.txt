@@ -1,0 +1,10 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 12
+
+Q: Suppose that i is a variable of type int, f is a variable of type float, and d is a
+variable of tpe double. Explain what conversions take place during the execution of the 
+following statement: d = i + f;
+
+A: Assignment conversion rules dictate that the expression on the right is converted to
+   the type on the left. In this case the result is a double. 
+

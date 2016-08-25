@@ -1,0 +1,13 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 14
+:
+Q: Does the following statement always compute the fractional part of f correctly
+   (assuming that f and frac_part are float variables)?
+
+   float frac_part, f;
+   frac_part = f - (int)f;
+
+   if not, what's the problem?
+
+A: Sort of, the order of presendence (cast, sub, assign) makes the result a float value of 0.6. 
+   (5.6 - 5) 

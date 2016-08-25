@@ -1,0 +1,9 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 7, exercise 10
+
+Q: Suppose that i is a variable of type int, j is a variable of type long, and k
+   is a variable of type unsigned int. What is the expression i + (int)j * k
+
+K is the largest variable after j has been cast. Usual arithmetic conversion rules
+dictate that i and j be promoted to K. The type of the expression is unsigned int.
+
