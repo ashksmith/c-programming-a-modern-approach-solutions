@@ -1,5 +1,5 @@
 /* Author: Ashley K. Smith
- * Solution to "C Programming: A Modern Approach" chapter 6, programming project 3
+ * Solution to "C Programming: A Modern Approach" chapter 7, programming project 3
  *
  * Q: Modify the sum2.c program from section 7.1 to sum a series of double values.
  */
