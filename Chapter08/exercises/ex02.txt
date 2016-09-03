@@ -1,0 +1,12 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 8, exercise 2
+
+Q: The Q&A section shows how to use a letter as an array subscript. Describe
+   how to use a digit (in character form) as a subscript. 
+
+A: Using the subtract operator on two chars will promote both chars to ints, so doing 
+
+   int a[] = {1,2,3,4,5};
+   printf("%d", a['2' - '0']); 
+
+   is the same as a[2 - 0] and so the expression will print the 2nd element (3)

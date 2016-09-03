@@ -1,0 +1,9 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 8, exercise 3
+
+Q: Write a declaration of an array named weekend containing seven bool values.
+   include an initializer that makes the first and last values true; all over
+   values should be false. 
+
+A: 
+_Bool weekend[6] = {1,0,0,0,0,1};

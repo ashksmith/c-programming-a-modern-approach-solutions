@@ -1,0 +1,9 @@
+Author: Ashley K. Smith
+Solution to "C Programming A Modern Approach" chapter 8, exercise 4
+
+Q: (C99) Repeat Exercise 3, but this time use a designated initializer. 
+   Make the intializer as short as possible
+
+A: _Bool weekend[] = {[0] = 1, [6] = 1};
+   
+   I could include stdbool.h here, but this is "short".
