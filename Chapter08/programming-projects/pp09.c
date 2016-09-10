@@ -28,14 +28,15 @@ int main(){
 	}
 	//Set A to the starting location
 	map[row][col] = letter;
+	//Increment to B, as its the first letter to be placed
 	letter++;
 
 	//while letter < 90 (Z in ascii)
 	srand((unsigned) time(&t));
-	while(letter < 90){
+	while(letter <= 90){
 		randNum = rand() % 4;		
 		switch(randNum){
-			case 0: //up 
+			case 0: //up, check if the up move will go out of bounds and hit a .
 				if(((row - 1) >= 0) && (map[row - 1][col]) == '.'){
 					row = row - 1;
 					map[row][col] = letter;					
@@ -65,7 +66,8 @@ int main(){
 				}
 		}
 	}
-
+	
+	//print map/maze
 	for(i = 0; i <= 9; i++){
 		for(n = 0; n <= 9; n++){
 			printf(" %c ", map[i][n]);
