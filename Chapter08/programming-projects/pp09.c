@@ -66,7 +66,7 @@ int main(){
 		}
 	}
 
-	for(i = 0; i < 9; i++){
+	for(i = 0; i <= 9; i++){
 		for(n = 0; n <= 9; n++){
 			printf(" %c ", map[i][n]);
 		}
