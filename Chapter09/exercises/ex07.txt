@@ -1,0 +1,23 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 9, exerice 7
+
+Suppose that the function f has the following definition:
+
+int f(int a, int b) { ... }
+
+which of the following statements are legal? (Assume that i has type int and x has type double.)
+
+(a) i = f(83, 12);
+	Legal.
+
+(b) x = f(83, 12);
+	Legal.
+
+(c) i = f(3.15, 9.28);
+	Legal, but will lose fractional part as the parameters are converted to int and the value of i is integer by conversion rules.
+
+(d) x = f(3.15, 9.28);
+	Legal, same as above but the reuslt will have a fractional part as promoted to double.
+
+(e) f(83, 12);
+	Legal, however nothing is done with the result.

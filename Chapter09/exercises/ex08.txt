@@ -1,0 +1,17 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 9, exerice 8
+
+Which of the following would be valid prototypes for a function that returns nothing
+and has one double paramter?
+
+(a) void f(double x);
+	valid.
+
+(b) void f(double);
+	valid, function parameters may have names omitted.
+
+(c) void f(x);
+	invalid, function parameters may have names omitted but not types.
+
+(d) f(double x);
+	invalid, functions in c99 may not have types omitted.
