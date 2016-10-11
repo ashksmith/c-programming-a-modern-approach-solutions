@@ -1,0 +1,7 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 10, exercise 3
+
+Suppose that a program has only one function(main). How many different variables
+named i could this program contain?
+
+One external, one parameter, one local and one in each local block
