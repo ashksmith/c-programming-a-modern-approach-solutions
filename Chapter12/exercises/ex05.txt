@@ -1,0 +1,26 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 12, exercise 5.
+
+Suppose that a is a one-dimensional array and p is a pointer variable. Assuming
+that the assignment p = a has just been performed, which of the following
+expressions are illegal because of mistmatched types? Of the remaining
+expressions, which are true (Have a nonzero value)?
+
+The name of an array can be used as a pointer to the first element
+in the array.
+
+p = a
+
+(a) p == a[0]
+False, this is equal to comparing &a[0] to a[0]. 
+
+(b) p == &a[0]
+True, same as comparing &a[0] to &a[0]. As p is a pointer to a[0]
+
+(c) *p == a[0]
+True
+
+(d) p[0] == a[0]
+Pointers may be used as an array name. In this case we are comparing
+a[0] == a[0] which is true.
+
