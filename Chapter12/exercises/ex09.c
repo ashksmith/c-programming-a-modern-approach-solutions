@@ -27,10 +27,9 @@ double inner_product(const double *a, const double *b, int n){
 	int i = 0;
 	while(i < n){
 		i++;
-		//Using array names as pointers, sum together the product of
-		// the elements	of arr1, and arr2. In C99 the compiler
-		// will treat pointers and arrays the same. Passing arr1 to this
-		// function is the same as a = &arr1[0].
+		//a and b are pointers to the base address of each passed array.
+		//Using pointer arithmetic to increment through the elements
+		//of each array it is possible to add the product of each array
 		sum = sum + ((*(a++)) * (*(b++)));
 	}
 	return sum;
