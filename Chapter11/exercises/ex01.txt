@@ -1,0 +1,35 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 11, exercise 1.
+
+"If i is a variable and p points to i, which of the following expressions are
+aliases for i?"
+
+Aliasing is using multiple names to access the same area of memory. p is an alias
+for i aslong as it references the same location as i.
+
+(a) *p
+*p is an alias for i. Changing *p will change i.
+
+(b) &p
+&p is not an alias for i. &p contains the address of p.
+
+(c) *&p
+Dereferencing the address of p. Not an alias
+
+(d) &*p
+The address of the dereferenced value of p. Not an alias.
+
+(e) *i
+i is an int, not  a pointer. Not a alias.
+
+(f) &i
+Not an alias
+
+(g) *&i
+Dereferencing the address of i, an alias.
+
+(h) &*i
+i is still an int type, cannot use pointer operators.
+
+a and g are aliases. 
+

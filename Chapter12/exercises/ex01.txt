@@ -1,0 +1,26 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 12, exercise 1.
+
+Q: Suppose that the following declarations are in effect:
+   int a[] = {5, 15, 34, 53,14 ,2, 52, 72};
+   int *p = &a[1], *q = &a[5];
+
+(a) What is the value of *(p+3)?
+The value of this expression is 14. 
+
+(b) What is the value of *(q-3)?
+The value this expression is 34
+
+(c) What is the value of q - p;
+Subtracting a pointer from another pointer is equal to the difference
+between the two pointers measured by the index the point at. This expression
+equates to 5 - 1 = 4.
+
+(d) Is the condition of p < q true or false?
+Comparison operators used with points test against their relative positions
+they hold in the array; they must be in the same array. This expressions
+is evaluated as 1 < 5, which is true
+
+(e) Is the condition of *p < *q true or false?
+This this expression tests against the value in memory the pointers
+point at. The expression is evaluated as to 15 < 2, which is false.

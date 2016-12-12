@@ -1,0 +1,35 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 11, exercise 2.
+
+"If i is an int variable and p and q are pointers to int, which of the following
+assignments are legal?"
+
+int i, *p, *q;
+
+(a) p = i;
+Illegal, p is an pointer.
+
+(b) *p = &i;
+Illegal, *p is an integer variable, &i is a pointer to int.
+
+(c) &p = q;
+Illegal. &p is a pointer to pinter to an integer, q is pointer to int.
+
+(d) p = &q;
+Illegal.
+
+(e) p = *&q;
+Legal
+
+(f) p = q;
+Legal, Both p and q are pointers to integers.
+
+(g) p = *q;
+Illegal
+
+(h) *p = q;
+Illegal
+
+(i) *p = *q;
+Legal
+

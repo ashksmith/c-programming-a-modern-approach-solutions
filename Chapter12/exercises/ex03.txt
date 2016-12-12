@@ -1,0 +1,30 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 12, exercise 2.
+
+What will be the contents of the a array after the following statements are 
+executed?
+
+#define N 10
+
+int a[N] = {1,2,3,4,5,6,7,8,9,10};
+int *p = &a[0], *q = &a[N-1], temp;
+
+while(p < q){
+	temp = *p;
+	*p++ = *q;
+	*q-- = temp;
+
+}
+
+After the first iteration, 10 and 1 have been swapped and the p and q place in the
+array have been incremented by one, and reduced by one respectively. 
+
+    p			 q
+10, 2, 3, 4, 5, 6, 7, 8, 9, 1
+
+The second;
+       p              q      
+10, 9, 3, 4, 5, 6, 7, 8, 2, 1
+
+When the loop is complete the array has been reversed to:
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1
