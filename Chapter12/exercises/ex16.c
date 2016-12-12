@@ -10,31 +10,33 @@
 #include <stdlib.h>
 
 #define DAYS 7
-#define HOURS  24
+#define HOURS 24
 
-int find_largest(int a[], int n);
+
+int find_largest(int [], int);
 
 int main(void){
-	//(*p)[HOURS] is an pointer to an unnamed array of integers HOURS Long.
-	int temperatures[DAYS][HOURS] = {0}, (*p)[HOURS] = {0}, i = 0, *pt;
+	int temperatures[DAYS][HOURS], (*p)[HOURS], i, y;
 
-	//pt begins by pointing at the address for temperatures[0][0]
-	//each successive increment will make it point to temperatures[0][1]..[0][2]..[0][12]..
-	//upon reaching temperatures[0][HOURS-1] (Zero counting), we incremement to temperatures[1][0] and continues
-	for(pt = &temperatures[0][0]; pt < &temperatures[DAYS-1][HOURS-1]; pt++){
-		*pt = rand() % 32;
+	/* Populate temperatures array with fluff */
+	for(i = 0; i < DAYS; i++){
+		for(y = 0; y < HOURS; y++){
+			temperatures[i][y] = rand() % 32;
+		}
 	}
 
-	//p = row i of temperatures.
-	//when p is incremented, we incrememnt to the next row. 
-	//Condition ensures that we don't overstep row 7
-	for(p = &temperatures[i]; p < &temperatures[DAYS]; p++, i++){
+	/* Create two high value integers for function to find*/
+	temperatures[0][1] = 404;
+	temperatures[3][13] = 405;
+
+	/* p = &temperatures[0], p < the 7 rows of temperatures,
+	 * increment p through the rows*/
+	for(p = temperatures; p < &temperatures[DAYS]; p++){
+		/* *p is a pointer to p'th row temperatures, pass to function */
+
 		printf("%d ", find_largest(*p, HOURS));
-		printf("%d ", *p);
 	}
 
-
-	return 0;
 }
 
 int find_largest(int a[], int n){
