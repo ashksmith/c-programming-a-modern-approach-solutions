@@ -1,0 +1,38 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 13, exercise 1
+
+"The following function calls supposedly write a single new-line character, but some are incorrect. Identify
+which calls don't work and explain why."
+
+a. printf("%c", '\n');
+This statement is valid as printf is expecting a charater literal.
+
+b. printf("%c", "\n");
+This statement is invalid because a string is passed when a character is expected.
+
+c. printf("%s", '\n');
+Invalid because a character literal is passed when a string is expected.
+
+d. printf("%s", "\n");
+Valid.
+
+e. printf('\n');
+Invalid because printf is expecting to a pointer/string. '\n' is a integer/character literal.
+
+f. printf("\n");
+Valid.
+
+g. putchar('\n');
+Valid
+
+h. putchar("\n");
+Invalid, putchar expects a character/integer not a string.
+
+i. puts('\n');
+Invalid puts expects a string, not a character literal.
+
+j. puts("\n");
+Valid.
+
+k. puts(" ");
+Valid. 

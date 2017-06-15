@@ -1,0 +1,20 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 13, exercise 2
+
+"Suppose that p has been declared as follows:
+char *p = "abc";
+
+Which of the following calls are legal? Show the output produced
+by each legal call, and explain why the others are illegal"
+
+a. putchar(p);
+Ilegal, putchar expects a character.
+
+b. putchar(*p);
+Legal. *p is a reference to the first element of array p, and thus should print a. 
+
+c. puts(p);
+Legal. puts expects a string. The output is abc
+
+d. puts(*p);
+Ilegal, puts requires a string. *p is a reference to the first element of an array, which is an integer. 
