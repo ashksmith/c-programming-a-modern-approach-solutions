@@ -1,0 +1,26 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 13, exercise 9
+
+What will be the value of the string s1 after the following statements have been
+executed?
+
+strcopy(s1, "computer");
+strcopy(s2, "science");
+if (strcmp(s1, s2) < 0)
+	strcat(s1, s2);
+else
+	strcat(s2, s1);
+s1[strlen(s1) -6] = '\0';
+
+s1 = computer
+s2 = science
+
+strcmp compares strings lexicographically, like a dictionary, so a is less than z,
+d is more than c etc. In this case, the result of strcmp will be < 0. 
+
+strcat will append science to the string computer to make "computerscience\0".
+
+The length of "computerscience" is 15 as strlen returns the string length not
+including the null terminator.
+
+s1 = computers\0

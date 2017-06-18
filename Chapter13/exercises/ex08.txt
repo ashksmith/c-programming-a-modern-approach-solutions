@@ -1,0 +1,11 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 13, exercise 8
+
+What will be the value of the string str after the following statements have been
+executed?
+
+strcpy(str, "tire-bouchon");
+strcpy(&str[4], "d-or-wi");
+starcat(str, "red?");
+
+str = "tired-or-wired?\0"

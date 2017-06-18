@@ -1,0 +1,16 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 13, exercise 7
+
+Suppose that str is an array of characters. Which one of the following statements
+is not equivalent to the other three?
+
+char str[] = "hello";
+
+(a) *str = 0;
+(b) str[0] = '\0'
+(c) strcpy(str, "")
+(d) strcat(str, "")
+
+d is the malcontent! a, b and c in various ways create an empty string. a and b 
+achieve this by making the first character of the string a null terminator character. c copies an empty string into str.
+d appends an empty string to the end of str, rather than the start. 
