@@ -1,0 +1,22 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 13, exercise 14
+
+What does the following program print?
+
+#include <stdio.h>
+
+int main(void){
+	char s[] = "Hsjodi", *p;
+	for (p = s; *p; p++)
+		--*p;
+	puts(s);
+	return 0;
+}
+
+This program will loop through string s. The indirection + decrement statement on 
+line 11 will cause each letter in the string to move back 1 position in the ascii
+table.
+
+H(72) becomes G(71) and s(115) becomes r(114) and so on. This program will output
+the word "Grinch".
+

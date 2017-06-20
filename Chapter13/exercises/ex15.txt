@@ -1,0 +1,20 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 13, exercise 15
+
+Let f be the following function:
+
+int f(char *s, char *t){
+	char *p1, *p2;
+	for(p1 = s; *p1; p++){
+		for(p2 = t; *p2; p2++){
+			if(*p1 == *p2) break
+		if (*p2 == '\0') break;
+		}
+	}
+	return p1 - s;
+}
+
+(a) What is the value of f("abcd", "babc")? - 3
+(b) What is the value of f("abcd", "bcd")? - 0
+(c) In general, what value does f return when passed two strings s and t?
+The function f in general will return the first address character that is in S and not in T.
