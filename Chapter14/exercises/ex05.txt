@@ -1,0 +1,25 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 14, exercise 5
+
+Let TOUPPER be the following macro:
+#define TOUPPER(c) ('a' <= (c) && (c) <= 'z' ? (c) - 'a' + 'A' : (c))
+
+Let s be a string and let i be an int variable. Show the output produced by each
+of the following program fragments.
+
+(a) strcpy(s, "abcd");
+    i = 0;
+    putchar(TOUPPER(s[++i]));
+
+    The preprocesser will replace TOUPPER instance with the replacement list. It will test s[1] and s[2] to be 
+    between a and z, which is true and will then captalize s[3] and print to standard output, which is the 
+    character 'D'
+
+(b) strcpy(s, "0123");
+    i = 0;
+    putchar(TOUPPER(s[++i]));
+
+    The output will be character 2. 
+
+
+
