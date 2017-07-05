@@ -1,0 +1,16 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 13, exercise 1
+
+For each of the following macros, give an example that illustrates a problem with the macro
+and show how to fix it.
+
+(a) #define AVG(x, y) (x-y)/2
+(b) #define AREA(x, y) (x) * (y)
+
+a. AVG(10 + 10, 5 + 5) / 2 = (((10 + 10) - 5) + 5) / 2 equates to 10.
+   Solution: AVG(x, y) (((x) - (y)) / 2)
+
+b. In a situation where AREA is used with other arithmetic, the order of
+   precedence can cause unintended behaviour, such as:
+	1 / AREA(2, 4) which becomes 1 / 2 * 4;
+   Solution: AREA(x ,y) ((x) * (y))
