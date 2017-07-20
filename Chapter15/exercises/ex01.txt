@@ -1,0 +1,31 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 15, Exercise 1
+
+Section 15.1 listed several advantages of dividing a program into multiple
+source files.
+
+(a) Describe several other advantages.
+
+1. It's not really practical to allow many programmers to edit a single source file.   Splitting a source file into multiple smaller files has the added benefit of
+   allowing shared responsability on a single project.
+
+2. Having clear well defined file responsability allows easier code reuse in a
+   project. Keeping files small and streamlined this way makes it easier to
+   identify bugs and problems. Using a single source file for a task in a project
+   has the added benefit of being.. used a lot, which can potentially identify
+   problems which may well be hidden during development and may be discovered
+   after heavy usage in deployment.
+
+3. Smaller source files are generally easier to understand and digest.
+
+(b) Describe some disadvantages.
+
+1. Splitting an already large program into smaller logical section can be time
+   consuming and a bit confusing.
+
+2. Logical reasoning can be subjective; Disagreements on how the program should
+   be split can arise.
+
+3. Can add uneeded complexity.
+
+
