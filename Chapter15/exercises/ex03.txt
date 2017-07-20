@@ -1,0 +1,9 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 15, Exercise 2
+
+we saw that witing #include <file> instead of #include "file" may not work if file
+is one that we've written. Would there by any problem with writing #include "file"
+instead of #include <file> if file is a system header? 
+
+It will work observing the following behavior: It will search the local directory
+for file, if it does not exist it will search the system directory for file. 
