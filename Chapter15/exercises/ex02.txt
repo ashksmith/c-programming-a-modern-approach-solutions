@@ -1,0 +1,15 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 15, Exercise 2
+
+Which of the following should not be put in a head file? Why not?
+(a) Function prototypes
+(b) Function definitions
+    Should not be kept in a header file. C expects functions to be defined exactly
+    once. If a function in a header file is included multiple times, then the program
+    will contain multiple defintions. 
+(c) Macro defintiions
+(d) Type definitions
+
+
+
+
