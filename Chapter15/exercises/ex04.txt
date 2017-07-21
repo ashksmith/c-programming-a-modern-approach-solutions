@@ -1,0 +1,64 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 15, Exercise 4
+
+Assume that debug.h is a header file with the following contents:
+
+-- debug.h --
+
+#ifdef DEBUG
+#define PRINT_DEBUG(n) printf("Value of " #n ": %d\n", n)
+#else
+#define PRINT_DEBUG(n)
+#endif
+
+Let testdebug.c be the following source file
+
+-- testdebug.c --
+
+#include <stdio.h>
+#define DEBUG
+#include "debug.h"
+
+int main(void){
+	int = 1, j = 2, k = 3;
+
+#ifdef DEBUG
+	printf("Output if DEBUG is defined:\n");
+#else
+	printf("Output if DEBUG is not defined:\n");
+#endif
+
+	PRINT_DEBUG(i);
+	PRINT_DEBUG(j);
+	PRINT_DEBUG(k);
+	PRINT_DEBUG(i + j);
+	PRINT_DEBUG(2 * i + j - k);
+
+	return 0;
+}
+
+(a) What is the output when the program is executed?
+    Output if DEBUG is defined:
+    Value of i : 1
+    Value of j : 2
+    Value of k : 3
+    Value of i + j : 1
+    Value of 2 * i + j - k : 1
+
+(b) What is the output if the #define directive is removed from testdebug.c
+    Output if DEBUG isnot defined:
+    (No output, the replacement list of PRINT_DEBUG is black)
+
+(c) Explain why the output is different in parts (a) and (b)
+    In this program the output is dependent on if the DEBUG macro has been defined in the program.
+    The program has basically two states: If debug is defined, print debug information, otherwise don't
+
+
+(d) Is it neccessary for the DEBUG macro to be defined BEFORE debug.h is included
+    in order for PRINT_DEBUG to have the desired effect? Justify your answer.
+    The preprocessor will work from top to bottom, line by line, resolving any includes along the way.
+    Because DEBUG is undefined at the point debug.h is processed, it will not have the desired effect.
+    In order for PRINT_DEBUG to actually print any debugging information, DEBUG must be defined at any stage
+    before it is included.
+
+
