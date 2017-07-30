@@ -1,0 +1,14 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 16, Exercise 1
+
+In the following declarations, the x and y structures have members named x and y. 
+
+	struct { int x, int y} x;
+	struct { int x, int y} y;
+
+Are these declarations legal on an individual basis? Cold both declarations appear
+as shown in a program? Justify your answer.
+
+The following declarations are valid because each struct forms it's own scope
+or namespace. 
+
