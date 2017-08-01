@@ -1,0 +1,19 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 16, Exercise 12
+
+Support that u is the following union:
+
+	union {
+		double a;
+		struct {
+			char b[4];
+			double c;
+			int d;
+		} e;
+		char f[4];
+	} u;
+
+Solve the same as exercise 11. How much space will a C compiler allocate for union u?
+
+size of u = 4 bytes + 8 bytes + 4 bytes = 16 bytes.
+
