@@ -1,0 +1,22 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 16, Exercise 11
+
+Suppose that s is the following struct:
+	struct {
+		double a;
+		union {
+			char b[4];
+			double c;
+			int d;
+		} e;
+		char f[4];
+	}s;
+
+if char values occupy one byte, int values occupy four bytes, and double values occupy
+eight bytes, how much space will a C compiler allocate for?
+
+Unions will only store enough data for the larger type in it's members, in this
+case it's a double, of 8 bytes. The structure contains a double, and a char array
+4 bytes in length.
+
+Size of struct = 8 bytes + 8 bytes + 4 bytes = 20 bytes.
