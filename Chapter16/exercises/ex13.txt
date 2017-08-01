@@ -1,0 +1,36 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 16, Exercise 13
+
+Suppose that s is the following structure (point is a structure tag declared in ex10):
+
+	struct shape {
+		int shape_kind;
+		struct point center;
+		union {
+			struct {
+				int height, width;
+			} rectangle;
+			struct {
+				int radius;
+			} circle;
+		} u;
+	} s;
+
+If the value of shape_kind is RECTANGLE, the height and width members store the dimen-
+sions of a rectangle. If the value of shape_kind is CIRCLE the radius member stores
+the radius of a circle. Indicate which of the following statements are legal, and show
+how to repair the ones that aren't:
+
+(a) s.shape_kind = RECTANGLE;
+    Legal
+(b) s.center.x = 10;
+    Legal
+(c) s.height = 25;
+    Illegal, s.u.rectangle.height = 25;
+(d) s.u.rectangle.width = 8;
+    Legal
+(e) s.u.circle = 5;
+    Illegal, set kind to CIRCLE first
+(f) s.u.radius = 5;
+    Illegal s.u.circle.radius = 5;
+
