@@ -1,0 +1,27 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 16, Exercise 17
+
+Suppose that b ad i are declared as follows:
+
+enum { FALSE, TRUE } b;
+int i;
+
+Which of the following statements are legal? Which ones are "safe" (Always yield a
+meaningful result)?
+
+(a) i = FALSE;
+    Legal
+
+(b) b = i;
+    Legal and unsafe
+
+(c) b++;
+    Legal and unsafe
+
+(d) i = b;
+    Legal
+
+(e) i = 2 * b + 1;
+    Legal
+
+
