@@ -1,0 +1,25 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 17, Exercise 7
+
+The following loop is supposed to delete all nodes from a linked list and release
+the memory that they occupy. Unfortunately, the loop is incorrect. Explain what's
+wrong with it and show how to fix the bug.
+
+for(p = first; p != NULL; p = p->next)
+	free(p);
+
+This loop creates a dangling pointer p. The memory that p points to is recovered before
+p is able to point to the next link in the chain in the post statement list.
+p points to nothing, attempting to access next will result in undefined behavior.
+
+This can be fixed by maintaining a pointer to the next link in the chain.
+
+struct node tmp;
+for(p = first; p != NULL;){
+	tmp = p->next;
+	free(p);
+	p = tmp;
+}
+
+
+
