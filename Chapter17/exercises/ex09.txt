@@ -1,0 +1,13 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 17, Exercise 9
+
+True or false: if x is a structure and a is a member of that structure, then (&x)->a is the same
+as x.a. Justify your answer
+
+struct sample{
+	int a;
+} x;
+
+True. (&x)->a is an indirected pointer to a, thus is the same as x.a. 
+
+(&x)->a is the same as doing (*(&x)).a
