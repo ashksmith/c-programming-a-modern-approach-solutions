@@ -1,0 +1,29 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" Chapter 17, Exercise 15
+
+Show the output of the following program, and explain what it does
+
+#include <stdio.h>
+int f1(int(*f)(int));
+int f2(int i);
+
+int main(void){
+	printf("Answer: %d\n", f1(f2));
+	return 0;
+}
+
+int f1(int (*f)(int)){
+	int n = 0;
+	while((*f)(n))
+		n++;
+	return n;
+}
+
+int f2 (int i){
+	return i * i + i - 12;
+}
+
+The program contains two functions. F1 takes arguments of a pointer to an integer function, in this case f2. 
+f1 will execute f1 while the number of positive, and essentially how many functions calls to f2 were made. 
+
+The output of this program is 3. 
