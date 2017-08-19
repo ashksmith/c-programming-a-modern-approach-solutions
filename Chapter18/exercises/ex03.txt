@@ -1,0 +1,12 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 18, exercise 3
+
+List the storage duration, scope and linkage of each variable and paramter
+in the following file:
+
+extern float a; // static duration, file scope, undefined?
+
+void f(register double b){ // b: auto duration, block scope, no linkage
+	static int c; // static duration, block scope and no linkage
+	auto char d; // auto duration, block scope and no linkage
+}
