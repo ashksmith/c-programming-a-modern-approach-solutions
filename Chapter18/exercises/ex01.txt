@@ -1,0 +1,47 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 18, exercise 1
+
+For each of the following declarations, identify the storage class, type qualifiers,
+type specifiers, declarators and initialisers.
+
+Properties of a variable:
+	Storage class
+		Storage class dpecifies the lifetime of a variable.
+
+	Type qualifiers
+		Type qualifiers describe additional information about a variable.
+		For example; const declares that a variable cannot change it's
+		given value.
+
+	Type specifiers
+		Type specifiers literally tell which type.
+
+
+(a) static char **lookup(int level);
+	Storage class: static
+	Type qualifiers: None, this is a function
+	Type specifiers: char **
+	Declarators: **lookup(int level)
+	Initialisers: None
+
+(b) volatile unsigned long io_flags;
+	Storage class: volatile
+	Type qualifiers: None
+	Type specifiers: Unsigned long
+	Declarators: io_flag
+	Initialisers: None
+
+(c) extern char *file_name[MAX_FILES], path[];
+	Storage class: extern
+	Type qualifiers: None
+	Type specifiers: char 
+	Declarators: *filename[], path[]
+	Initialisers: None
+
+(d) static const char token_buf[] = "";
+	Storage class: static
+	Type qualifiers: const
+	Type specifiers: char
+	Declarators: token_buf[]
+	Initialisers. ""
+
