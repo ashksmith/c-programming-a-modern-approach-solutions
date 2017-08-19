@@ -1,0 +1,16 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 18, exercise 4
+
+Let f be the following function. What will be the value of f(10) if f has never
+been called before? What will be the value of f(10) if has been called fives times
+previously
+
+static variables are initialised only once prior to the program execution.
+The value of f if f has never been called before is 10 * 0 = 0.
+The value of f if f has been called 5 times before is 10 * 4 = 50.
+
+inf f(int i){
+	static int j = 0;
+	return i * j++;
+}
+
