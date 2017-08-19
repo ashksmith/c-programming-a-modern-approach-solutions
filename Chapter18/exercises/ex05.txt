@@ -1,0 +1,19 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 18, exercise 5
+
+State whether each of the following statements is true or false. Justify each answer
+
+(a) Every variable with static storage duration has file scope
+	False; static variables inside a block has block scope.
+
+(b) Every variable declared inside a function has no linkage
+	False; extern variables have unknown linkage
+
+(c) Every variable with internal linkage has static duration
+	True; Variables that are intended to be used with internal linkage, it must
+              have a value. 
+
+(d) Every parameter has block scope
+	 True; Parameters are passed by value, and are copies of the arguments. 
+               All variables inside a block, have block scope.
+
