@@ -1,0 +1,24 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 18, exercise 6
+
+The following function is supposed to print an error message. Each message is 
+preceeded by an integer, indicating the number of times the function has been called
+unfortunately, the function always displays 1 as the number of the error message.
+Locate the error and show how to fix it without making any changes outside the 
+function
+
+void print_error(const char *message){
+	int n = 1;
+	printf("Error %d: %s", n++, message);
+}
+
+In the function above the variable has block scope, and is lost after the block
+exits, and reinitialised to 1 each time the function is called.
+
+The function below fixes this with a static variable that has static storage
+duration, the value of n is kept and incremented with each call.
+
+void print_error(const char *message){
+	static int n = 1;
+	printf("Error %d: %s", n++, message);
+}
