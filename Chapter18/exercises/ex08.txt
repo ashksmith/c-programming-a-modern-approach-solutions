@@ -1,0 +1,22 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 18, exercise 8
+
+Write a complete description of the type of x as specified by each of the following
+declarations.
+
+(a) char (*x[10])(int);
+	x is an array of 10 pointers to functions with an integer argument that return char
+
+(b) int (*x(int))[5];
+	x is a function with 1 int argument that returns a pointer to an array of 5 integers.
+
+(c) float *(*x(void))(int);
+	x is a function that has no parameters
+	that returns a pointer to a function with one integer argument
+	that returns a pointer to a float
+
+(d) void (*x(int, void (*y)(int)))(int);
+	x is a function with one integer argument, and an argument which points to a function
+	with one integer argument and no return type, that returns a pointer to an function with
+	an integer argument and no return type.
+
