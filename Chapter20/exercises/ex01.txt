@@ -1,0 +1,58 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 20, exercise 1
+
+Show the output produced by each of the following program fragments. Assume that i, j,
+and k are unsigned short variables. 
+
+(a) i = 8; j = 9;
+    printf("%d", i >> 1 + j >> 1);
+
+    Because of order of precedence, the expression is evaluated like so:
+	i >> (1 + j) >> 1
+    
+        1    +    j     =    10 
+    0000 0001 0000 1001 = 0000 1010
+
+        i
+    0000 1000 
+
+     i >> 10       >> 1
+
+    0000 0000	 0000 0000 = 0
+
+(b) i = 1; 
+    printf("%d", i & ~i);
+
+        i	   ~i
+    0000 0001	1111 1110 
+
+     i & (~i)
+    0000 0000
+
+    i & (~i) = 0
+
+(c) i = 2; j = 1; k = 0;
+    printf("%d", ~i & j ^ k);
+
+       ~i	    j        (~i) & j
+    1111 1101  	0000 0001   0000 0001
+
+    ((~i) & j) ^ k 
+    0000 0001
+
+     ~i & j ^ k = 1
+
+(d) i = 7; j = 8; k = 9;
+    printf("%d", i ^ j & k);
+
+        i	    j	        k
+    0000 0111   0000 1000   0000 1001
+
+       j & k
+    0000 1000
+
+    i ^ (j & k)
+    0000 1111
+
+    i ^ (j & k) = 15
+
