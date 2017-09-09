@@ -1,0 +1,15 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 20, exercise 8
+
+Let f be the following function:
+	unsigned int f(unsigned int i, int m, int n){
+		return (i >> (m + 1)) & ~(~0 << n);
+	}
+
+(a) What is the value ~(~0 << n)?
+	It's the same as ~(1 << n).
+
+
+(b) What does this function do?
+
+
