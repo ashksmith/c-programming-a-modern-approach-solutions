@@ -1,0 +1,9 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 20, exercise 13
+
+If n is an unsigned int variable, what effect does the following statement have on the
+bits in n?
+
+	n &= n - 1;
+
+Each time the statement is executed, we remove 1, or the least significant bit.
