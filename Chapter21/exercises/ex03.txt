@@ -1,0 +1,9 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 21, exercise 3
+
+When a macro hides a function, which come first in the header file: The macro
+definition or the function prototype? Justify your answer.
+
+The function prototype must always come before the macro. Without the prototype
+the macro cannot be expanded properly. GCC won't even let you place the prototype
+and macro in the wrong order.
