@@ -1,0 +1,16 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 21, exercise 2
+
+Having located the header files on your system, find a standard header which a macro hides
+a function.
+
+In dirent.h the following function is hidden by a macro, depending on two conditions.
+
+/* Return the file descriptor used by DIRP.  */
+extern int dirfd (DIR *__dirp) __THROW __nonnull ((1));
+
+# if defined __OPTIMIZE__ && defined _DIR_dirfd
+#  define dirfd(dirp)	_DIR_dirfd (dirp)
+# endif
+
+
