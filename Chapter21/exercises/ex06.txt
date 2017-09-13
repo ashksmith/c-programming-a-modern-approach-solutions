@@ -1,0 +1,55 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 21, exercise 6
+
+The <ctype.h> header usually defines most of its functions as macros as well. These
+macros rely on a static array that's declared in <ctype.h> but defined in a
+seperate file. A portion of a typical <ctype.h> header appears below. Use this
+sample to answer the following questions:
+
+(a) Why do the names of the "bit" macros (Such as _UPPER) and the _ctype array
+    being with an underscore?
+
+    According to the GNU C manual, reserved names include ALL external identifiers
+    that begine with an underscore. This is so that "the library and header files
+    can define functions, variables and macros for internal purposes without risk
+    of conflict with names in user programs."
+
+(b) Explain what the _ctype array will contain. Assuming that the character set
+    is ASCII. Show the values of the array elements at positions 9, 32, 65 and
+    94.
+
+    The _ctype array contains a lookup table of ascii types that correspond to the
+    index. So _ctype[0-31] will be 0000 1000, _ctype[32] will be 0010 0000, etc
+
+    0000 1000 \t
+    0010 0000 space
+    0000 0001 A
+    0001 0000 ^
+
+(c) Whats the advantage of using an array to implement these macros?
+
+    It avoids the possibility of side effects, simplifies testing what catagory
+    a input is while maintaining the ASCII labelling.
+
+    #define _UPPER   0x01   /* upper-case letter */
+    #define _LOWER   0x02   /* lower-case letter */
+    #define _DIGIT   0x04   /* decimal digit */
+    #define _CONTROL 0x08   /* control character */
+    #define _PUNCT   0x10   /* punctuation character */
+    #define _SPACE   0x20   /* white-space character */
+    #define _HEX     0x40   /* hexadecimal digit */
+    #define _BLANK   0x80   /* space character */
+
+    #define isalnum(c)  (_ctype[c] & (_UPPER|_LOWER|_DIGIT))
+    #define isalpha(c)  (_ctype[c] & (_UPPER|_LOWER))
+    #define iscntrl(c)  (_ctype[c] & _CONTROL)
+    #define isdigit(c)  (_ctype[c] & _DIGIT)
+    #define isgraph(c)  (_ctype[c] &
+                          (_PUNCT|_UPPER|_LOWER|_DIGIT))
+    #define islower(c)  (_ctype[c] & _LOWER)
+    #define isprint(c)  (_ctype[c] &
+                          (_BLANK|_PUNCT|_UPPER|_LOWER|_DIGIT))
+    #define ispunct(c)  (_ctype[c] & _PUNCT)
+    #define isspace(c)  (_ctype[c] & _SPACE)
+    #define isupper(c)  (_ctype[c] & _UPPER)
+    #define isxdigit(c) (_ctype[c] & (_DIGIT|_HEX))
