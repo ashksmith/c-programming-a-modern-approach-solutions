@@ -1,0 +1,17 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 22, exercise 1
+
+Indicate whether each of the followin files is more likely to contain
+text data or a binary data:
+
+(a) A file of object code produced by a compiler
+    Binary
+
+(b) a program listing prodced by a C compiler
+    A listing needs to be human readable: Text
+
+(c) An email message sent from one computer to another
+    Text
+
+(d) A file containing a graphics image
+    Binary, with some human readable meta information and headers
