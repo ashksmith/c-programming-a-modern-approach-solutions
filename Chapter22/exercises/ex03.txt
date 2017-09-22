@@ -1,0 +1,22 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 22, exercise 3
+
+Find the error in the following program and show how to fix it:
+
+	FILE *fp;
+
+	if(fp = fopen(filename, "r")){
+		// Read characters until nd of file
+	}
+	fclose(fp);
+
+The program never tests fp for a NULL pointer. Closing a NULL pointer
+results in an error. 
+
+FILE *fp
+
+if((fp = fopen(filename, "r")) != NULL){
+	// read charachers
+} else {
+	// handle error, exit
+}
