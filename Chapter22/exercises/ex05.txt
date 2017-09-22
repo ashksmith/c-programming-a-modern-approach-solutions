@@ -1,0 +1,12 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 22, exercise 6
+
+Is there any different between the printf conversion specifications %.4d and %04d? If so
+explain what it is.
+
+When precision is used with an integer value, it specifies the minimum number of digits. Leading
+zeroes will be added if the number has fewer than specified.
+
+%04d specifies a minimum field width of 4, with padded leading zeroes.
+
+They are the same.
