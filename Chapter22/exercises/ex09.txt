@@ -1,0 +1,12 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 22, exercise 9
+
+Which one of the following calls is not a valid way of reading one character from the
+standard input stream?
+
+(a) getch()
+(b) getchar()
+(c) getc(stdin)
+(d) fgetc(stdin)
+
+getch, it's not a function in the standard library.
