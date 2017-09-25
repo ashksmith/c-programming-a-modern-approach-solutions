@@ -1,0 +1,23 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 22, exercise 11
+
+The following loop appears in the fcopy.c program:
+
+	while((ch = getc(source_fp)) != EOF)
+	  	putc(ch, dest_fp);
+
+Supose that we neglected to put parentheses around ch = getc(source_fp):
+
+	while(ch = (getc(source_fp) != EOF))
+		putc(ch, dest_fp);
+
+Would the program compile without an error? If so, what would the program 
+do when it's run?
+
+There is an issue with the order of precedence in the program. The != 
+operator has a greater precedence than assignment. The program will first
+test that getc(source_fp) does not equal EOF and return a boolean value.
+which is then assigned to ch. ch will be equal to 1 (SOH) until it hits
+EOF, then it will be 0 (NUL) 
+
+
