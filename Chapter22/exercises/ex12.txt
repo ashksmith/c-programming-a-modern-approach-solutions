@@ -1,0 +1,21 @@
+Author: Ashley K. Smith (https://github.com/ashksmith/)
+Solution to "C Programming: A modern Approach" chapter 22, exercise 12
+
+Find the error in the following function and show how to fix it.
+
+	int count_periods(const char *filename){
+		FILE *fp;
+		int n = 0;
+	
+		if((fp = fopen(filename, "r")) != NULL){
+			while(fgetc(fp) != EOF)
+				if(fgetc(fp) == '.')
+					n++;	
+			fclose(fp);
+		}
+		return n;
+	}
+
+	
+The error is that fgetc is called twice. In each call of the function a new charact-
+er is taken from it's argument, in effect skipping a letter.
