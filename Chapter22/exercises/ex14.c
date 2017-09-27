@@ -14,12 +14,15 @@ int b_fputs(const char *s, FILE *stream);
 
 int main(void){
 	char output[30];
-	FILE *fp = fopen("output.txt", "rw");
+	FILE *fp = fopen("output.txt", "w");
 	a_fgets(output, 25, stdin);
 	printf("a_fgets from stdin: %s\n", output);
 	b_fputs("Hakunamatata", fp);
+	fclose(fp);
+	fp = fopen("output.txt", "r");
 	a_fgets(output, 100, fp);
 	printf("\n%s\n", output);
+	fcloes(fp);
 	return 0;
 }
 
