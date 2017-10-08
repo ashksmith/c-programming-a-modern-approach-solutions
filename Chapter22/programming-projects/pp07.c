@@ -18,11 +18,15 @@
 
    (b) Write a program named uncompress_file that reverses the compression performed
        by the compress_file program.
+
+       Solution is written as two functions, uncomment the calls in main. 
+       Could be neater, improvements but it works.
 */
 
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 
 char input_buffer[5000];
 void compress(char *name);
@@ -30,21 +34,26 @@ void uncompress(char *name);
 
 int main(int argc, char *argv[]){
 	//compress(argv[1]);
-	uncompress("f4.txt.rle");
+	uncompress(argv[1]);
 	return 0;
 }
 
 void uncompress(char *name){
 	FILE *fp;
-	fp = fopen(name, "r");
+	// Attempt to open file
+	if((fp = fopen(name, "r")) == NULL){
+		printf("Error opening %s\n", name);
+		exit(EXIT_FAILURE);
+	}
+
  	fseek(fp, 0L, SEEK_END);
 	int num = ftell(fp);
 	rewind(fp);
 	char *compressed_buf = malloc(num * sizeof(char));
 	fread(compressed_buf, sizeof(char), num, fp);
 
-	printf("%s\n", compressed_buf);
-
+	printf("\nUncompressed\n");
+	printf("------------\n");
 	int i = 0, multiplier = 0, x = 0;
 	for(i = 0; i < num; i++){
 			// Even numbers
@@ -76,22 +85,30 @@ void compress(char *name){
 	printf("%s\n", input_buffer);
 
 	// Loop through the uncompressed file buffer.
-	int i, num_of_repetitions = 1, y = 0;
-	for(i = 0; i < num_characters; i++){
+	int i = 0, num_of_repetitions = 1, y = 0;
+	for(i = 0; i < num_characters;){
 		// Count how many repeats there are of the current character i in the input buffer
-		while(input_buffer[i + num_of_repetitions ] == input_buffer[i]){
+		while(input_buffer[i + num_of_repetitions] == input_buffer[i]){
 			num_of_repetitions++;
 		}
 		// Add the number of repeats to the buffer index, and skip that many
+
 		i += num_of_repetitions ;
-		output_buffer[y++] = num_of_repetitions  + '0';
-		num_of_repetitions  = 1;
+		output_buffer[y++] = num_of_repetitions + '0';
 	        output_buffer[y++] = input_buffer[i - 1];
+		num_of_repetitions = 1;
 	}
 
-	printf("\nCompressed File\n");
+	printf("Compressed File\n");
 	printf("---------------\n");
 	printf("%s\n", output_buffer);
-	fp = fopen("f4.txt.rle", "wb");
+
+	char *outfname = malloc((sizeof(name) / sizeof(name[0])) + sizeof(".rle"));
+
+	strcat(outfname, name);
+	strcat(outfname, ".rle");
+	strcat(outfname, "\0");
+	fp = fopen(outfname, "wb");
+	printf("%s\n", outfname);
 	fwrite(output_buffer, sizeof(output_buffer[0]), y, fp);
 }
